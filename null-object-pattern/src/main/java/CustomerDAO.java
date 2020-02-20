@@ -1,4 +1,4 @@
-public class CustomerFactory {
+public class CustomerDAO {
 
 	public static final String[] names = { "Rob", "Joe", "Julie" };
 

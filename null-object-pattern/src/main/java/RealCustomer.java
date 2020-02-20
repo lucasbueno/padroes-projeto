@@ -8,9 +8,4 @@ public class RealCustomer extends AbstractCustomer {
 	public String getName() {
 		return name;
 	}
-
-	@Override
-	public boolean isNull() {
-		return false;
-	}
 }
