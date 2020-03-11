@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -10,18 +9,11 @@ public class No {
 
 	public No(String name) {
 		this.name = name;
-		this.setCor(new Branco());
+		cor = new Branco();
 	}
 
-	public List<No> buscaProfundidade() {
-		List<No> resultado = new ArrayList<>();
-		cor.busca(this, resultado);
-		return resultado;
-	}
-	
-	public List<No> buscaProfundidade(List<No> visitados) {
-		cor.busca(this, visitados);
-		return visitados;
+	public void buscaProfundidade(List<No> list) {
+		cor.busca(this, list);
 	}
 
 	public Set<No> getAdjacentes() {
@@ -32,14 +24,9 @@ public class No {
 		adjacentes.add(adj);
 	}
 
-	public void setCor(Cor cor) {
+	public void setCor(Cor cor, List<No> list) {
 		this.cor = cor;
-		cor.assumiu(this, new ArrayList<No>());
-	}
-
-	public void setCor(Cor cor, List<No> visitados) {
-		this.cor = cor;
-		cor.assumiu(this, visitados);
+		cor.assumiu(this, list);
 	}
 
 	public String toString() {

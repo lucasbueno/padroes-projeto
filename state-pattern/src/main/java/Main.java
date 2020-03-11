@@ -23,7 +23,8 @@ public class Main {
 		f.addAdjacente(g);
 		a.addAdjacente(h);
 
-		List<No> visitados = a.buscaProfundidade();
+		List<No> visitados = new ArrayList<>();
+		a.buscaProfundidade(visitados);
 		for (No no : visitados)
 			System.out.println(no);
 	}
