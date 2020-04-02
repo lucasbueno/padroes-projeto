@@ -8,7 +8,7 @@ public class TrechoComposto implements TrechoAereo {
 		this.segundo = segundo;
 		this.taxaConexao = taxaConexao;
 		if (!primeiro.getDestino().contentEquals(segundo.getOrigem()))
-			throw new RuntimeException("O destino do primeiro" + "não é igual a origem do segundo");
+			throw new RuntimeException("O destino do primeiro trecho não é igual a origem do segundo");
 	}
 
 	public String getOrigem() {
