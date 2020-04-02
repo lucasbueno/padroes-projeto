@@ -12,6 +12,12 @@ public class Main {
 		No f = new No("F");
 		No g = new No("G");
 		No h = new No("H");
+		
+		No a2 = new No("A");
+		
+		if(a.equals(a2))
+			System.out.println("Iguais");
+		
 		a.addAdjacente(b);
 		c.addAdjacente(d);
 		a.addAdjacente(e);
