@@ -15,7 +15,7 @@ public abstract class RecuperadorArquivo {
 
 	private Arquivo chamarProximo(String nome) {
 		if (proximo == null)
-			throw new RuntimeException("Não foi possível " + " recuperar o arquivo " + nome);
+			throw new RuntimeException("Não foi possível recuperar o arquivo " + nome);
 		return proximo.recuperar(nome);
 	}
 
