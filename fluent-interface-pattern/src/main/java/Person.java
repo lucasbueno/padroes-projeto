@@ -18,4 +18,17 @@ public class Person {
 		this.role = role;
 		return this;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getBirthDate() {
+		return birthDate;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
 }
