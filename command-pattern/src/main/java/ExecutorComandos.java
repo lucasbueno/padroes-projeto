@@ -25,12 +25,12 @@ public class ExecutorComandos {
 		return c.desfazer();
 	}
 
-	public void refazer() {
+	public String refazer() {
 		if (desfeitos.isEmpty())
-			return;
+			return "";
 
 		Comando c = desfeitos.pop();
-		c.fazer();
 		feitos.push(c);
+		return c.fazer();
 	}
 }
