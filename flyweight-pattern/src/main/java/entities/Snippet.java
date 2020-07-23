@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Snippet implements MyString {
-	private List<MyString> chars;
+	private List<MyString> myStrings;
 
 	public Snippet() {
-		this.chars = new ArrayList<MyString>();
+		this.myStrings = new ArrayList<MyString>();
 	}
 
 	public void add(MyString e) {
-		chars.add(e);
+		myStrings.add(e);
 	}
 
 	public String getString() {
 		String string = new String();
-		for (MyString c : chars)
+		for (MyString c : myStrings)
 			string = string.concat(c.getString());
 		return string;
 	}

@@ -1,4 +1,5 @@
 import entities.CharFactory;
+import entities.LowerCase;
 import entities.MyString;
 import entities.Snippet;
 import entities.UpperCase;
@@ -16,11 +17,12 @@ public class Main {
 		aaab.add(aaa);
 		aaab.add(CharFactory.get("b"));
 		System.out.println(aaab.getString());
+		
 
 		MyString AAAB = new UpperCase(aaab);
 		System.out.println(AAAB.getString());
 
-		MyString A = new UpperCase(CharFactory.get("a"));
+		MyString A = new LowerCase(AAAB);
 		System.out.println(A.getString());
 
 	}
