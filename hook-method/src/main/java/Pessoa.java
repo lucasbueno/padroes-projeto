@@ -9,7 +9,7 @@ public abstract class Pessoa {
 		this.rendaMensal = rendaMensal;
 	}
 
-	public double calcularImpostoTotal() {
+	public double calcularImpostoAnual() {
 		return calcularImpostoMensal() * 12;
 	}
 
