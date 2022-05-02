@@ -1,3 +1,4 @@
+import java.util.logging.Logger;
 
 public class Arquivo {
 	private String nome;
@@ -5,29 +6,9 @@ public class Arquivo {
 	private String conteudo;
 	private static Arquivo arquivo;
 
-	private Arquivo(String nome) {
-		this.nome = nome;
-		this.extensao = "";
-		this.conteudo = "";
-	}
+	private Arquivo() {
 
-	private Arquivo(String nome, String extensao) {
-		this.nome = nome;
-		this.extensao = extensao;
-		this.conteudo = "";
-	}
-
-	// ERRO! Não posso ter dois métodos com o mesmo nome e os mesmos parâmetros
-//	private Arquivo(String nome, String conteudo) {
-//		this.nome = nome;
-//		this.extensao = "";
-//		this.conteudo = conteudo;
-//	}
-
-	private Arquivo(String nome, String extensao, String conteudo) {
-		this.nome = nome;
-		this.extensao = extensao;
-		this.conteudo = conteudo;
+		Logger logger = Logger.getLogger("meu logger");
 	}
 
 	public static Arquivo criaNome(String nome) {
@@ -38,7 +19,9 @@ public class Arquivo {
 
 		if (!valida(nome))
 			return null;
-		return new Arquivo(nome);
+		Arquivo a = new Arquivo();
+		a.setNome(nome);
+		return a;
 	}
 
 	public static Arquivo criaNomeExtensao(String nome, String extensao) {
@@ -52,7 +35,11 @@ public class Arquivo {
 			return null;
 		if (!valida(extensao))
 			return null;
-		return new Arquivo(nome, extensao);
+		Arquivo a = new Arquivo();
+		a.setConteudo("");
+		a.setExtensao(extensao);
+		a.setNome(nome);
+		return a;
 	}
 
 	public static Arquivo criaNomeConteudo(String nome, String conteudo) {

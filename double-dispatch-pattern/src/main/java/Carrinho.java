@@ -27,6 +27,10 @@ public class Carrinho {
 
 		return total;
 	}
+	
+	public double getValidade() {
+		return getPropriedades().get(PropriedadesCarrinho.VALIDADE);
+	}
 
 	public double getPeso() {
 		return getPropriedades().get(PropriedadesCarrinho.PESO);

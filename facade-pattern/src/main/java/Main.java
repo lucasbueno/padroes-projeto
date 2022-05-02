@@ -6,6 +6,7 @@ public class Main {
 		shapeMaker.drawCircle();
 		shapeMaker.drawRectangle();
 		shapeMaker.drawSquare();
+		
 	}
 
 }

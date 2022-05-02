@@ -4,12 +4,12 @@ public class Person {
 	private String birthDate;
 	private Role role;
 
-	public Person named(String name) {
+	public Person isNamed(String name) {
 		this.name = name;
 		return this;
 	}
 
-	public Person bornedOn(String birthDate) {
+	public Person isBornedOn(String birthDate) {
 		this.birthDate = birthDate;
 		return this;
 	}
@@ -19,7 +19,7 @@ public class Person {
 		return this;
 	}
 
-	public String getName() {
+	public String named() {
 		return name;
 	}
 

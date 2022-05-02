@@ -25,6 +25,9 @@ public class Main {
 
 		doc = exec.refazer();
 		System.out.println("7 - " + doc);
+		
+		doc = exec.fazer(new InserirPDF(doc, "exercicios.pdf"));
+		System.out.println("8 - " + doc);
 	}
 
 }
